@@ -1,5 +1,9 @@
 from flask import Flask, render_template, url_for
 import json
+import supabase
+import dotenv
+
+# We need to access the env file for api keys
 
 # Create some random data for this projects
 table_data = [
