@@ -19,7 +19,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for row in data %}
+            {% for row in manual_table %}
             <tr>
                 <td>{{ row.name }}</td>
                 <td>{{ row.age }}</td>
@@ -28,6 +28,12 @@
             {% endfor %}
         </tbody>
     </table>
+
+    <ul>
+        {% for todo in data %}
+            <li>{{ todo.name }} - {{ todo.description }}</li>
+        {% endfor %}
+    </ul>
 
 </body>
 <footer>

@@ -17,6 +17,9 @@ print("Checking what your current credentials are:")
 print("SUPABASE_URL:", SUPABASE_URL)
 print("SUPABASE_KEY:", SUPABASE_KEY)
 
+# Connect to the Supabase database
+supabase_client = supabase.Client(SUPABASE_URL, SUPABASE_KEY)
+
 # Create some random data for this projects
 table_data = [
     {"name": "John", "age": 30, "country": "USA"},
@@ -29,9 +32,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', data=table_data)
+    # Query table
+    data = supabase_client.from_('lil_old_table').select().execute()
+    print(data)
+    return render_template('index.html', data=data, manual_table = table_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
-
     
