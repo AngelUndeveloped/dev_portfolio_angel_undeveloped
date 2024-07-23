@@ -7,15 +7,15 @@ body{
 
 table {
     border-collapse: collapse;
-    width: auto;
+    width: 100%;
 }
 
 th, td {
     padding: 10%;
-    border: 1% solid purple;
+    border: 1px solid black;
 }
 
 th {
     background-color: lightblue;
-    color: aliceblue;
+    color: whitesmoke;
 }
