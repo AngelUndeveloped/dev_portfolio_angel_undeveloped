@@ -3,6 +3,7 @@ from flask import Flask, render_template, url_for
 import json
 import supabase
 import dotenv
+import logging
 
 # We need to access the env file for api keys
 dotenv_path = os.path.join(os.getcwd(), '.venv\\.env')
@@ -33,11 +34,22 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # Query table
-    database_data = supabase_client.from_('lil_old_table').select('patient_id', 'created_at', 'patient_name', 'alive_status').execute()
-    print(database_data)
-    return render_template('index.html', supabase_data=database_data)
+    try:
+        # result = supabase_client.from_('lil_old_table').select("*").execute()
+        result = supabase_client.from_('lil_old_table').select('patient_id', 'created_at', 'patient_name', 'alive_status').execute()
+        print(result.model_dump_json())
+        database_data = result.data
+        
+        logging.info(f"Supabase data: {database_data}")
+        print("")
+        print(database_data)
+        print("")
+    except Exception as e:
+        logging.error(f"Error querying supabase: {e}")
+        
+    return render_template('index.html', supabase_data=database_data, manual_table=table_data)
 
-    # database_data = supabase_client.from_('lil_old_table').select().execute()
+    # database_data = supabase_client.from_('lil_old_table').select('patient_id', 'created_at', 'patient_name', 'alive_status').execute()
     # return render_template('index.html', supabase_data=database_data, manual_table = table_data)
 
 if __name__ == "__main__":

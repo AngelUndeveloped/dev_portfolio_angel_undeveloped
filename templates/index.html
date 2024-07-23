@@ -10,7 +10,7 @@
 
 <body>
     <h1> Supabase info:</h1>
-    <!-- <table id="my_table">
+    <table id="my_table">
         <thead>
             <tr>
                 <th>Name</th>
@@ -27,17 +27,28 @@
             </tr>
             {% endfor %}
         </tbody>
-    </table> -->
+    </table>
 
-    <ul>
-        {% for patient in supabase_data %}
-            <li>
-                Patient ID: {{ patient.patient_id }}
-                Name: {{ patient.patient_name }}
-                Created at: {{ patient.created_at }}
-                Alive Status: {{ patient.alive_status }}
-            </li>
-        {% endfor %}
-    </ul>
+    <table id="my_supabase_table">
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>Name</th>
+                <th>Created at</th>
+                <th>Alive Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for patient in supabase_data %}
+            <tr>
+                <td>{{ patient.patient_id }}</td>
+                <td>{{ patient.patient_name }}</td>
+                <td>{{ patient.created_at }}</td>
+                <td>{{ patient.alive_status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
+
 </html>
