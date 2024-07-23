@@ -2,4 +2,20 @@ body{
     font-style: italic;
     font-size: large;
     font-family: 'Times New Roman', Times, serif;
+     background-color: rgb(255, 255, 255);
+}
+
+table {
+    border-collapse: collapse;
+    width: auto;
+}
+
+th, td {
+    padding: 10%;
+    border: 1% solid purple;
+}
+
+th {
+    background-color: lightblue;
+    color: aliceblue;
 }
