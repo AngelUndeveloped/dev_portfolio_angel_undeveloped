@@ -33,9 +33,12 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # Query table
-    data = supabase_client.from_('lil_old_table').select().execute()
-    print(data)
-    return render_template('index.html', data=data, manual_table = table_data)
+    database_data = supabase_client.from_('lil_old_table').select('patient_id', 'created_at', 'patient_name', 'alive_status').execute()
+    print(database_data)
+    return render_template('index.html', supabase_data=database_data)
+
+    # database_data = supabase_client.from_('lil_old_table').select().execute()
+    # return render_template('index.html', supabase_data=database_data, manual_table = table_data)
 
 if __name__ == "__main__":
     app.run(debug=True)

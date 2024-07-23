@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <h1> Hello World, this is from the template</h1>
-    <table id="my_table">
+    <h1> Supabase info:</h1>
+    <!-- <table id="my_table">
         <thead>
             <tr>
                 <th>Name</th>
@@ -27,17 +27,17 @@
             </tr>
             {% endfor %}
         </tbody>
-    </table>
+    </table> -->
 
     <ul>
-        {% for todo in data %}
-            <li>{{ todo.name }} - {{ todo.description }}</li>
+        {% for patient in supabase_data %}
+            <li>
+                Patient ID: {{ patient.patient_id }}
+                Name: {{ patient.patient_name }}
+                Created at: {{ patient.created_at }}
+                Alive Status: {{ patient.alive_status }}
+            </li>
         {% endfor %}
     </ul>
-
 </body>
-<footer>
-
-</footer>
-
 </html>
