@@ -1,0 +1,21 @@
+body{
+    font-style: italic;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+     background-color: rgb(255, 255, 255);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 10%;
+    border: 1px solid black;
+}
+
+th {
+    background-color: lightblue;
+    color: whitesmoke;
+}
