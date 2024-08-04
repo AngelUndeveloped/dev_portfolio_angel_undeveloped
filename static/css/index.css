@@ -2,8 +2,22 @@ body{
     font-style: italic;
     font-size: large;
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(0, 0, 0);
+    background-color: whitesmoke;
 }
+
+div {
+    width: 50%; /* adjust the width as needed */
+    margin: 0 auto; /* this will center the div horizontally */
+    position: absolute; /* use absolute positioning to center vertically */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* move back half of its own size so it centers perfectly */
+}
+
+header {
+    background-color: rgb(115, 15, 175);
+}
+
 sections {
     background-color: brown;
     display: flex;
@@ -17,10 +31,6 @@ section {
     background-color: #f7f7f7;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header {
-    background-color: blueviolet;
 }
 
 table {
