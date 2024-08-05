@@ -14,6 +14,12 @@ div {
     transform: translate(-50%, -50%); /* move back half of its own size so it centers perfectly */
 }
 
+headers {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content:first baseline;
+}
+
 header {
     background-color: rgb(115, 15, 175);
 }
