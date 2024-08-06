@@ -1,8 +1,13 @@
+/* Background: #f7f7f7 (a light gray)
+Text: #333333 (a dark gray)
+Accent: #666666 (a medium gray)
+Highlight: #999999 (a lighter gray) */
+
 body{
     font-style: italic;
     font-size: large;
     font-family: 'Times New Roman', Times, serif;
-    background-color: whitesmoke;
+    background-color: lightgray;
 }
 
 div {
@@ -53,3 +58,65 @@ th {
     background-color: rgb(194, 230, 173);
     color: whitesmoke;
 }
+
+
+
+body {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f7f7;
+  }
+  
+  .headers {
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .banner {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px auto;
+  }
+  
+  section {
+    width: calc(25% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  section h2 {
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #333333;
+  }
