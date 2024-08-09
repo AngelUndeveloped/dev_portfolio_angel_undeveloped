@@ -3,26 +3,85 @@ Text: #333333 (a dark gray)
 Accent: #666666 (a medium gray)
 Highlight: #999999 (a lighter gray) */
 
-body {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(247, 247, 247);
+}
+
+li, a, button {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #333333;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 30p 10%;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color:blue;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgb(135, 12, 151);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+
+/* body {
   font-style: italic;
   font-size: 16px;
   line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
   background-color: rgb(247, 247, 247);
-  /* background-color: rgb(255, 255, 255); */
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+} */
 
-.topnav {
+
+
+/* .topnav {
   display: flex;
   justify-content: space-between;
   background-color: #333333;
   overflow: hidden;
-  /* width: 100%; */
-}
+} */
 
 /* Style the links inside the navigation bar */
-.topnav a {
+/* .topnav a {
   float: left;
   color: #999999;
   text-align: center;
@@ -30,16 +89,16 @@ body {
   padding: 18px 20px;
   text-decoration: none;
   font-size: 17px;
-}
+} */
 
 /* Change color of links on hover */
-.topnav a:hover {
+/* .topnav a:hover {
   background-color: #ddd;
   color: black;
-}
+} */
 
 /* Add a color to the active/current link */
-.topnav a.active {
+/* .topnav a.active {
   background-color: #68036b;
   color: whitesmoke;
-}
+} */
