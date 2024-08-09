@@ -9,81 +9,37 @@ body {
   line-height: 1.5;
   font-family: 'Open Sans', sans-serif;
   background-color: rgb(247, 247, 247);
+  /* background-color: rgb(255, 255, 255); */
 }
 
 
-div {
-  width: 50%;
-  /* adjust the width as needed */
-  margin: 0 auto;
-  /* this will center the div horizontally */
-  position: absolute;
-  /* use absolute positioning to center vertically */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* move back half of its own size so it centers perfectly */
-}
-
-
-.headers {
-  background-color: rgba(0, 0, 0, 0.05);
+.topnav {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-header {
-  background-color: rgb(115, 15, 175);
-}
-
-sections {
-  background-color: brown;
-  display: flex;
-  justify-content: space-around;
-}
-
-section {
-  width: calc(25% - 20px);
-  margin: 10px;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-
-
-
-
-
-
-
-.banner {
+  justify-content: space-between;
   background-color: #333333;
-  color: #ffffff;
-  padding: 20px;
+  overflow: hidden;
+  /* width: 100%; */
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #999999;
   text-align: center;
+  padding: 14px 16px;
+  padding: 18px 20px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.sections {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 50px auto;
+/* Change color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-section {
-  width: calc(25% - 20px);
-  margin: 10px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-  color: #333333;
-  margin-bottom: 10px;
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #68036b;
+  color: whitesmoke;
 }
