@@ -1,19 +1,24 @@
-/* Background: #f7f7f7 (a light gray)
-Text: #333333 (a dark gray)
-Accent: #666666 (a medium gray)
-Highlight: #999999 (a lighter gray) */
+:root {
+  --color-main-background-alt: whitesmoke;
+  --color-dark-alt: #FEFAF6;
+  --color-light-alt:#EADBC8 ;
+  --color-slate-alt: #DAC0A3;
+  --color-primary-alt: #102C57;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 10px;
-  background-color: #f7f7f7;
+  background-color: var(--color-main-background-alt);
 }
 
-li, a, button {
+body {
+  background-color: var(--color-main-background-alt);
+  /* font-family: 'Times New Roman', Times, serif; */
   font-family: "Open Sans", sans-serif;
-  font-style: italic;
+  font-style: normal;
   line-height: 1.5;
   font-size: 16px;
   text-decoration: none;
@@ -24,38 +29,51 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding: 30p 10%;
-  background-color: #333333;
+  background-color: var(--color-dark-alt);
 }
 
 .logo {
   justify-content: left;
   margin-right: auto;
   cursor: pointer;
-  width: 150px;
-  height: 100px;
+  width: 240px;
+  height: 120px;
+  background-color: var(--color-dark-alt);
+}
+
+.spinning_gears {
+  /* justify-content: center; */
+  width: auto;
+  height: 120px;
+  background-color: var(--color-dark-alt);
 }
 
 .nav_links {
   list-style: none;
+  background-color: var(--color-dark-alt);
 }
 
 .nav_links li {
   display: inline-block;
   padding: 0px 20px;
+  background-color: var(--color-dark-alt);
 }
 
 
 .nav_links li a {
   transition: all 0.3s ease 0s;
+  background-color: var(--color-dark-alt);
+  color: var(--color-dark);
 }
 
 .nav_links li a:hover {
-  color: blue;
+  color: var(--color-primary);
 }
 
 button {
   padding: 9px 25px;
-  background-color: rgb(205, 20, 230);
+  /* background-color: #E2E2B6; */
+  background-color: rgba(226, 226, 182, 0.7);
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -63,12 +81,9 @@ button {
 }
 
 button:hover {
-  background-color: rgba(205, 20, 230, 0.8);
+  background-color: rgba(226, 226, 182, 1);
 }
 
-body {
-  background-color: #f7f7f7;
-}
 
 footer {
   display: flex;
